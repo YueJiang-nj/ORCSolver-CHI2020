@@ -30,6 +30,6 @@ The project has the following file layout:
       QPforFlows/
       images/
 
-The `API_ORCSolver.pdf` includes the API of ORCSolver which can be used to specify layouts. Our API allows us to plug in different solvers for different ORC patterns (including `**ORCSolver(Ours)**`, `QP for Flows`, and `Pure Branch & Bound`). 
+The **API_ORCSolver.pdf** includes the API of ORCSolver which can be used to specify layouts. Our API allows us to plug in different solvers for different ORC patterns (including **ORCSolver(Ours)**, **QP for Flows**, and **Pure Branch & Bound**). 
 
-The `Code` folder contains all the source code for all the four methods as mentioned in the paper (`**ORCSolver(Ours)**`, `Pure Z3`, `QP for Flows`, `Pure Branch & Bound`). We also provide sample code for some layout patterns and the code generating examples in our teaser and video. 
+The **Code** folder contains all the source code for all the four methods as mentioned in the paper (**ORCSolver(Ours)**, **Pure Z3**, **QP for Flows**, **Pure Branch & Bound**). We also provide sample code for some layout patterns and the code generating examples in our teaser and video. 

@@ -1,8 +1,8 @@
 # ORCSolver: An Efficient Solver for Adaptive GUI Layout with OR-Constraints
 
-Conditionally accepted by the ACM Conference on Human Factors in Computing Systems (CHI), 2020.
+Conditionally accepted by **the ACM Conference on Human Factors in Computing Systems (CHI), 2020.**
 
-Authors: Yue Jiang, Wolfgang Stuerzlinger, Matthias Zwicker, Christof Lutteroth
+Authors: **Yue Jiang, Wolfgang Stuerzlinger, Matthias Zwicker, Christof Lutteroth**
 
 
 > **To get started:** 

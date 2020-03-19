@@ -4,6 +4,7 @@ Conditionally accepted by **the ACM Conference on Human Factors in Computing Sys
 
 Authors: **Yue Jiang, Wolfgang Stuerzlinger, Matthias Zwicker, Christof Lutteroth**
 
+**Paper:** http://www.cs.umd.edu/~yuejiang/papers/ORCSolver.pdf
 **Video:** https://www.youtube.com/watch?v=0S77vVG8btE&feature=youtu.be
 
 > **To get started:** 

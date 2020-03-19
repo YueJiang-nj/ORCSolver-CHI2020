@@ -8,6 +8,12 @@ Authors: **Yue Jiang, Wolfgang Stuerzlinger, Matthias Zwicker, Christof Lutterot
 
 **Video:** https://www.youtube.com/watch?v=0S77vVG8btE&feature=youtu.be
 
+**Related Paper: ORC Layout: Adaptive GUI Layout with OR-Constraints**
+
+**Paper:** http://www.cs.umd.edu/~yuejiang/CHI2019/paper.pdf
+
+**Video:** https://www.youtube.com/watch?v=eiEmLTfPDZQ&feature=youtu.be
+
 > **To get started:** 
 > 
 >     git clone https://github.com/YueJiang-nj/ORCSolver-CHI2020.git

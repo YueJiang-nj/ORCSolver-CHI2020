@@ -43,12 +43,13 @@ ACM CHI Conference on Human Factors in Computing Systems, 2021
 [BibTeX](citations/reverseorc.bib)
 [Code](https://github.com/YueJiang-nj/ReverseORC-CHI2021)
 
+
+## Prerequisite installation
+
 > **To get started:** 
 > 
 >     git clone https://github.com/YueJiang-nj/ORCSolver-CHI2020.git
 >
-
-## Prerequisite installation
 
     1. Python3 
     2. Tkinter (GUI package)

@@ -35,8 +35,8 @@ CHI_height = 240
 num_top = 8
 window_width = 640
 window_height = 480
-window_width = 400
-window_height = 400
+#window_width = 400
+#window_height = 400
 
 # create the window
 if show_window:

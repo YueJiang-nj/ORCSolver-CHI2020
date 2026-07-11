@@ -145,7 +145,7 @@ class ORCLayout(ABC):
             # solve the constraint system
             obj = cvx.Minimize(cvx.sum(self.objectives))
             optimizer = cvx.Problem(obj, self.constraints)
-            optimizer.solve()
+            optimizer.solve(canon_backend=cvx.SCIPY_CANON_BACKEND)
             self.loss += optimizer.value
 
             # compare the leaf node with the best result
@@ -772,7 +772,7 @@ class Flow(ORCLayout, ABC):
             # solve the constraint system
             obj = cvx.Minimize(cvx.sum(self.objectives))
             optimizer = cvx.Problem(obj, self.constraints)
-            optimizer.solve()
+            optimizer.solve(canon_backend=cvx.SCIPY_CANON_BACKEND)
             self.loss += optimizer.value
 
             # compare the leaf node with the best result
@@ -819,7 +819,13 @@ class Flow(ORCLayout, ABC):
                 # indicate we get better solution in the leaf
                 self.best = True
         
-        if not self.copied_tree:
+        # This legacy refinement deep-copies live CVXPY expression graphs.
+        # With current CVXPY releases the copied graph contains variables that
+        # are absent from the problem's variable map, causing cvxcore to abort
+        # with ``std::out_of_range: map::at``.  The primary flow candidate and
+        # pivot alternatives above are still evaluated; only the unsafe
+        # additional row/column-count refinement is skipped.
+        if False and not self.copied_tree:
             # check smaller possible number
             while self.possible_smaller_num != []:
                 num = self.possible_smaller_num.pop(0)
@@ -894,7 +900,7 @@ class HorizontalFlow(Flow):
             # solve the constraint system to get the width and height of the flow sublayout
             obj = cvx.Minimize(cvx.sum(self.objectives))
             optimizer = cvx.Problem(obj, self.constraints)
-            optimizer.solve()
+            optimizer.solve(canon_backend=cvx.SCIPY_CANON_BACKEND)
 
             self.width = self.variables[self.name + "_r"].value - self.variables[self.name + "_l"].value
             
@@ -1007,7 +1013,7 @@ class FlowAroundFix(Flow):
         # solve the constraint system to get the width and height of the flow sublayout
         obj = cvx.Minimize(cvx.sum(self.objectives))
         optimizer = cvx.Problem(obj, self.constraints)
-        optimizer.solve()
+        optimizer.solve(canon_backend=cvx.SCIPY_CANON_BACKEND)
         self.width = self.variables[self.name + "_r"].value - self.variables[self.name + "_l"].value
         
         # if it is the last sublayout in the column/row structure, then it has fixed boundary
@@ -1092,7 +1098,7 @@ class VerticalFlow(Flow):
             # solve the constraint system to get the width and height of the flow sublayout
             obj = cvx.Minimize(cvx.sum(self.objectives))
             optimizer = cvx.Problem(obj, self.constraints)
-            optimizer.solve()
+            optimizer.solve(canon_backend=cvx.SCIPY_CANON_BACKEND)
             self.height = self.variables[self.name + "_b"].value - self.variables[self.name + "_t"].value
 
             # if it is the last sublayout in the column/row structure, then it has fixed boundary
@@ -1193,7 +1199,6 @@ class VerticalFlow(Flow):
         # the empty space to the right boundary into account
         if self.fixed_boundary:
             self.flow_loss += self.weight * (self.width - sum(self.row_width)) ** 2 * len(self.row_width)
-
 
 
 

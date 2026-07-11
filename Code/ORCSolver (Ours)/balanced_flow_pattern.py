@@ -86,7 +86,7 @@ if show_window:
         else: 
             image3 = Image.open("../images/" + "1" + ".png")
             widgets.append([Label(root), "1" + ".png"])
-        image3 = image3.resize((top_button_width_pref, top_button_height_pref), Image.ANTIALIAS)
+        image3 = image3.resize((top_button_width_pref, top_button_height_pref), Image.Resampling.LANCZOS)
         photos.append(ImageTk.PhotoImage(image3))
         widgets[j][0].configure(image=photos[-1], bg="gray85")
 
@@ -97,7 +97,7 @@ if show_window:
     #     else:
     #         image3 = Image.open("../images/" + "2" + ".png")
     #         widgets.append([Label(root), "2" + ".png"])
-    #     image3 = image3.resize((top_button_width_pref, top_button_height_pref), Image.ANTIALIAS)
+    #     image3 = image3.resize((top_button_width_pref, top_button_height_pref), Image.Resampling.LANCZOS)
     #     photos.append(ImageTk.PhotoImage(image3))
     #     widgets[j][0].configure(image=photos[-1], bg="gray85")
 
@@ -223,8 +223,6 @@ if show_window:
     root.bind("<B1-Motion>", mouse_release)
 
 main()
-
-
 
 
 

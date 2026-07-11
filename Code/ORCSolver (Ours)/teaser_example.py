@@ -68,54 +68,54 @@ if show_window:
         else: 
             image3 = Image.open("../images/" + "1" + ".png")
             widgets.append([Label(root), "1" + ".png"])
-        image3 = image3.resize((top_button_width_pref, top_button_height_pref), Image.ANTIALIAS)
+        image3 = image3.resize((top_button_width_pref, top_button_height_pref), Image.Resampling.LANCZOS)
         photos.append(ImageTk.PhotoImage(image3))
         widgets[j][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "CHI2020.png")
-    image = image.resize((CHI_width-15, CHI_height-15), Image.ANTIALIAS)
+    image = image.resize((CHI_width-15, CHI_height-15), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "CHI2020.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "CHI2019.png")
-    image = image.resize((CHI_width-15, CHI_height-15), Image.ANTIALIAS)
+    image = image.resize((CHI_width-15, CHI_height-15), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "CHI2019.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "message_new.png")
-    image = image.resize((button_width+5, button_height-20), Image.ANTIALIAS)
+    image = image.resize((button_width+5, button_height-20), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "message.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "blank.png")
-    image = image.resize((textbox_width-180, textbox_height-20), Image.ANTIALIAS)
+    image = image.resize((textbox_width-180, textbox_height-20), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "blank.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "send_new.png")
-    image = image.resize((button_width-60, button_height-37), Image.ANTIALIAS)
+    image = image.resize((button_width-60, button_height-37), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "send.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "email_new.png")
-    image = image.resize((button_width-10, button_height-30), Image.ANTIALIAS)
+    image = image.resize((button_width-10, button_height-30), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "email.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "blank.png")
-    image = image.resize((textbox_width-180, textbox_height-20), Image.ANTIALIAS)
+    image = image.resize((textbox_width-180, textbox_height-20), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "blank.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
 
     image = Image.open("../images/" + "clear_new.png")
-    image = image.resize((button_width-60, button_height-37), Image.ANTIALIAS)
+    image = image.resize((button_width-60, button_height-37), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "clear.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1], bg="gray85")
@@ -160,7 +160,7 @@ def main():
 
     blank1 = ORCWidget("blank1", [textbox_width-160, textbox_width, textbox_width, \
                                     textbox_height, textbox_height, textbox_height])
-    blank2 = ORCWidget("blank1", [textbox_width-160, textbox_width, textbox_width, \
+    blank2 = ORCWidget("blank2", [textbox_width-160, textbox_width, textbox_width, \
                                     textbox_height, textbox_height, textbox_height])
 
     pivot1 = Pivot("p1", None, window_width, window_height)
@@ -332,8 +332,6 @@ if show_window:
 
 main()
 window_width = 80 * 10
-
-
 
 
 

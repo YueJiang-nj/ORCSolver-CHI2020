@@ -74,12 +74,12 @@ if show_window:
     for j in range(num):
         image = Image.open("../images/" + "pineapple.jpg")
         widgets.append([Label(root), "pineapple.jpg"])
-        image = image.resize((top_button_width_pref, top_button_height_pref), Image.ANTIALIAS)
+        image = image.resize((top_button_width_pref, top_button_height_pref), Image.Resampling.LANCZOS)
         photos.append(ImageTk.PhotoImage(image))
         widgets[j][0].configure(image=photos[-1])
 
     image = Image.open("../images/" + "CHI2020.png")
-    image = image.resize((fixed_right - fixed_left, fixed_bottom - fixed_top), Image.ANTIALIAS)
+    image = image.resize((fixed_right - fixed_left, fixed_bottom - fixed_top), Image.Resampling.LANCZOS)
     widgets.append([Label(root), "chi2020.png"])
     photos.append(ImageTk.PhotoImage(image))
     widgets[-1][0].configure(image=photos[-1])
@@ -235,7 +235,6 @@ if show_window:
     root.bind("<Button-1>", mouse_click)
     root.bind("<ButtonRelease-1>", mouse_release)
 main()
-
 
 
 

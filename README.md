@@ -1,18 +1,47 @@
 # ORCSolver: An Efficient Solver for Adaptive GUI Layout with OR-Constraints
 
-Accepted by **the ACM Conference on Human Factors in Computing Systems (CHI), 2020.**
+## publications
 
-Authors: **Yue Jiang, Wolfgang Stuerzlinger, Matthias Zwicker, Christof Lutteroth**
+### ORCSolver: An Efficient Solver for Adaptive GUI Layout with OR-Constraints
 
-**Paper:** http://www.cs.umd.edu/~yuejiang/papers/ORCSolver.pdf
+[Yue Jiang](https://yuejiang-nj.github.io/) ·
+[Wolfgang Stuerzlinger](https://www.sfu.ca/siat/people/research-faculty/wolfgang-stuerzlinger.html) ·
+[Matthias Zwicker](https://www.cs.umd.edu/~zwicker/) ·
+[Christof Lutteroth](https://people.bath.ac.uk/cl2073/)
 
-**Video:** https://www.youtube.com/watch?v=0S77vVG8btE&feature=youtu.be
+ACM CHI Conference on Human Factors in Computing Systems, 2020
 
-**Related Paper: ORC Layout: Adaptive GUI Layout with OR-Constraints**
+[Paper](https://yuejiang-nj.github.io/Publications/2020CHI_ORCSolver/paper.pdf) ·
+[Video](https://www.youtube.com/watch?v=5SAZ8iDKFhc) ·
+[BibTeX](citations/orcsolver.bib)
 
-**Paper:** http://www.cs.umd.edu/~yuejiang/CHI2019/paper.pdf
+### ORC Layout: Adaptive GUI Layout with OR-Constraints
 
-**Video:** https://www.youtube.com/watch?v=eiEmLTfPDZQ&feature=youtu.be
+[Yue Jiang](https://yuejiang-nj.github.io/) ·
+[Ruofei Du](https://ruofeidu.com/) ·
+[Christof Lutteroth](https://people.bath.ac.uk/cl2073/) ·
+[Wolfgang Stuerzlinger](https://www.sfu.ca/siat/people/research-faculty/wolfgang-stuerzlinger.html)
+
+ACM CHI Conference on Human Factors in Computing Systems, 2019
+
+[Paper](https://yuejiang-nj.github.io/Publications/2019CHI_ORCLayout/paper.pdf) ·
+[Video](https://www.youtube.com/watch?v=eiEmLTfPDZQ) ·
+[BibTeX](citations/orc-layout.bib)
+
+## Related Publication
+
+### ReverseORC: Reverse Engineering of Resizable User Interface Layouts with OR-Constraints
+
+[Yue Jiang](https://yuejiang-nj.github.io/) ·
+[Wolfgang Stuerzlinger](https://www.sfu.ca/siat/people/research-faculty/wolfgang-stuerzlinger.html) ·
+[Christof Lutteroth](https://people.bath.ac.uk/cl2073/)
+
+ACM CHI Conference on Human Factors in Computing Systems, 2021
+
+[Paper](https://yuejiang-nj.github.io/Publications/2021CHI_ReverseORC/paper.pdf) ·
+[Video](https://www.youtube.com/watch?v=uBVRtUvLFSk) ·
+[BibTeX](citations/reverseorc.bib)
+[Code](https://github.com/YueJiang-nj/ReverseORC-CHI2021)
 
 > **To get started:** 
 > 
